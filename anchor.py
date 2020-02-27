@@ -12,7 +12,7 @@ from config import *
 
 # process .data file
 data = [(a.split('=')[0].strip(), a.split('=')[1].strip()) for a in open(glob.glob('*.data')[0], 'r').readlines()]
-print(data)
+#print(data)
 
 # no. of clusters by default == no. of classes
 
@@ -21,7 +21,7 @@ train_path = data[1][1] if data[1][0] == 'train' else print('Invalid .data forma
 
 # update
 
-print(n_classes)
+#print(n_classes)
 
 
 
@@ -67,7 +67,8 @@ yolo_anchor_average=np.array(yolo_anchor_average, dtype=np.int)
 print(f'anchors are : {yolo_anchor_average}')
 
 plt.scatter(x[:, 0], x[:, 1], c=y_kmeans3, s=2, cmap='viridis')
-plt.scatter(yolo_anchor_average[:, 0], yolo_anchor_average[:, 1], c='black', s=30);
+plt.scatter(yolo_anchor_average[:, 0], yolo_anchor_average[:, 1], c='black', s=30)
+plt.title(f'yolov3 anchors k-means {n_clusters} clusters')
 plt.xlabel('width')
 plt.ylabel('height')
 plt.savefig('cluster.png', dpi = 300)

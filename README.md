@@ -15,7 +15,8 @@ Python script to run k-means clustering on any yolov3 format dataset to find app
 <hr>
 
 4. The output will be- 
-```anchors are : [[14 34]
+```
+    anchors are : [[14 34]
                  [81 36]
                  [12 26]
                  [14 40]]```
